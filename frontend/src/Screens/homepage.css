@@ -1,0 +1,57 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ grid-gap: 10px;;
+   
+  }
+  .products-li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 5px #c0c0c0c0 solid;
+    width: 277px;
+  
+  }
+  .product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+  .product-name{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .product-brand {
+    font: 1.2rem;
+    color: #808000;
+  
+  }
+  .product-price {
+    font-size: 3rem;
+    font-weight: bold;
+  
+  }
+  .product-image {
+    width: 200px;
+    height:200px;
+    margin: 0;
+  
+  }
+  .product-rating {
+    margin-bottom: 10px;
+  }
+.alert{
+  padding: 1rem;
+  border:0.1rem solid transparent;
+  border:0.5rem 
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+.alert-danger {
+  color: #cf1313;
+  background-color:#ffe0e0e0
+}
+  
