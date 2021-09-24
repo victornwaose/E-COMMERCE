@@ -26,7 +26,6 @@ app.get("/api/products/:_id", (req, res) => {
   const product = data.products.find((x) => {
     return x._id == productId;
   });
-  console.log(product);
   if (product) { 
     res.send(product);
   } else {

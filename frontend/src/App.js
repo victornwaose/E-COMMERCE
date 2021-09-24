@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Switch, } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 import Footer from "./footer/Footer"
@@ -7,17 +7,40 @@ import "./App.css";
 import{CartScreen} from "./Screens/CartScreen";
 import signinScreen from "./Screens/SigninScreen";
 import { useSelector } from "react-redux";
-import Headers from "./header/Header";
+
 
 function App() {
-  const userSignin = useSelector((state) => state.userSignin);
-  const {userInfo} = userSignin;
- console.log(userSignin)
- console.log(userInfo)
+  const cart = useSelector((state)=> state.cart)
+  const {cartItems} = cart
   return ( 
     <Router>
         <div className="grid-container">
-            <Headers />
+        <header className="row">
+          <div className="brand">
+              <h1>
+                  <Link to="/">E-COMMERCE</Link>
+              </h1>
+          </div>
+          <div className="link">
+              <h1 >   
+              <Link to="/cart?">Cart
+              {
+              cartItems?.length > 0 && (
+                <span className="badge">{cartItems?.length}</span>
+              )
+            }
+            </Link>
+          </h1>
+              <h1>
+                  {/* {userInfo ? (
+                    <Link to="/profile">{userInfo.name}</Link>
+                    
+                  ) : (
+                    <Link to="/signin">SignIn</Link>
+                  )} */}
+              </h1>
+          </div>
+      </header>
             <Switch>
             <div className="main">
                 <Route path="/product/:id" component={ProductScreen} />

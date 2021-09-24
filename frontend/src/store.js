@@ -5,10 +5,15 @@ import { cartReducer } from "./reducer/cartReducer";
 import Cookie from "js-cookie";
 import { userSigninReducer } from "./reducer/userReducer";
 
-const cartItems = Cookie.getJSON("cartItems") || [];
+ 
 const userInfo = Cookie.getJSON("userInfo") || null;
 
-const initialState = {cart : {cartItems}, userSignin: { userInfo }};
+const initialState = {
+  cart : {
+    cartItems : localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem("cartItem")) :[]
+  },  
+  userSignin: { userInfo }
+};
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,

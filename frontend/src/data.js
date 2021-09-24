@@ -67,7 +67,7 @@ export default {
       brand: "isioma",
       rating: 4,
       numReview: 10,
-      countInShock: 6,
+      
     },
     {
       _id: "7",
