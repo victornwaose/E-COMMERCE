@@ -17,10 +17,10 @@ export default {
   ],
   products: [
     {
-      _id: 1,
+      
       name: "suits",
       category: "suits",
-      Image: "/image/suits.jpeg",
+      image: "/image/suits.jpeg",
       price: 160,
       brand: "MEN",
       rating: 4.9,
@@ -28,10 +28,10 @@ export default {
       countInStock: 6,
     },
     {
-      _id: 2,
+     
       name: "corporate",
       category: "corporateWear",
-      Image: "/image/corporate.jpeg",
+      image: "/image/corporate.jpeg",
       price: 90,
       brand: "KINGS",
       rating: 7,
@@ -39,10 +39,10 @@ export default {
       countInStock: 6,
     },
     {
-      _id: 3,
+      
       name: "native_1",
       category: "nativeWears",
-      Image: "/image/native.jpeg",
+      image: "/image/native.jpeg",
       price: 60,
       brand: "isioma",
       rating: 7,
@@ -50,10 +50,10 @@ export default {
       countInStock: 5,
     },
     {
-      _id: 4,
+     
       name: "native_2",
       category: "nativeWears",
-      Image: "/image/navtive1.jpeg",
+      image: "/image/navtive1.jpeg",
       price: 80,
       brand: "isioma",
       rating: 7,
@@ -61,10 +61,10 @@ export default {
       countInStock: 6,
     },
     {
-      _id: 5,
+      
       name: "native_3",
       category: "nativeWears",
-      Image: "/image/native2.jpeg",
+      image: "/image/native2.jpeg",
       price: 60,
       brand: "isioma",
       rating: 7,
@@ -73,10 +73,10 @@ export default {
     },
 
     {
-      _id: 6,
+      
       name: "shirt and jeans",
       category: "shirts",
-      Image: "/image/native3.jpeg",
+      image: "/image/native3.jpeg",
       price: 60,
       brand: "isioma",
       rating: 7,
@@ -84,10 +84,10 @@ export default {
       countInStock: 6,
     },
     {
-      _id: 7,
+      
       name: "native_4",
       category: "nativeWears",
-      Image: "/image/shirt_and_jeans.jpeg",
+      image: "/image/shirt_and_jeans.jpeg",
       price: 60,
       brand: "isioma",
       rating: 7,
