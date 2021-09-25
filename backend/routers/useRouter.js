@@ -1,9 +1,11 @@
 import express from "express";
-import User from "../modules/useModel";
+import data from "../data";
+import User from "../modules/useModel.js";
+import expressAsyncHandler from "express-async-handler"
 
-const router = express.Router();
+const userRouter = express.Router();
 
-router.post("/signin", async (req, res) => {
+userRouter.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
     const signinUser = await User.findOne({
@@ -26,7 +28,7 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-router.get("/createadmin", async (req, res) => {
+userRouter .get("/createadmin", async (req, res) => {
   try {
     const user = new User({
       name: "victor",
@@ -40,5 +42,12 @@ router.get("/createadmin", async (req, res) => {
     res.send({ msg: error.message });
   }
 });
-export default router;
+
+userRouter.get('/seed',   expressAsyncHandler(async (req, res) =>{
+    const createdUsers = await User.insertMany(data.users) 
+    res.send({createdUsers});
+}));
+
+
+export default userRouter;
  

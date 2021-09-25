@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useEffect,  } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart, removeFromCart } from "../actions/cartAction";
@@ -18,7 +18,7 @@ const CartScreen = (props) => {
 
 
   const removeFromCartHandler = (productId) =>{
-    dispatch(removeFromCart(productId))
+    dispatch(removeFromCart(productId)); 
   }
   const checkOutHandler = () => {
     props.history.push("signin?redirect=shipping");
@@ -51,11 +51,11 @@ const CartScreen = (props) => {
                           <div>
                               <img src={item.image} alt={item.product} className="small"/>
                           </div>
-                          <div classNAme="min-30">
+                          <div className="min-30">
                              <Link  className="link-item"to={`/product/${item.product}`}>{item.name}</Link> 
                           </div>
                           <div>
-                            <select value={item.qty} onchange={e => dispatch(addToCart(item.product , Number(e.target.value)))}>
+                            <select value={item.qty} onChange={e => dispatch(addToCart(item.product , Number(e.target.value)))}>
                                 {[...Array(item.countInStock).keys()].map( x=> (
                                       <option key={x=1} value={x+1}>{x+1}</option>
                                     )
@@ -66,7 +66,7 @@ const CartScreen = (props) => {
                               ${item.price}
                           </div>
                           <div>
-                                  <button type="button" onClick={()=> removeFromCartHandler(item.product)}>Delete</button>
+                                  <button type="button" onClick={()=> removeFromCartHandler(item.product)} className=" ">Delete</button>
                           </div>
                       </div>
                   </li>
@@ -74,9 +74,9 @@ const CartScreen = (props) => {
            </ul>
          )}
        </div>
-       <div className="1">
-              <div className="card card-body">
-                   <ul>
+       <div className="card">
+              <div className="  card-body">
+                   <ul> 
                       <li>
                           <h2>
                                 Subtotal ({cartItems?.reduce((a, c) => a + c.qty, 0)}  items) :  $  
@@ -84,7 +84,7 @@ const CartScreen = (props) => {
                           </h2>
                       </li>
                       <li>
-                        <button type="button" onclick={ checkOutHandler} className="primary block" disable={cartItems?.length === 0}>
+                        <button type="button" onClick={ checkOutHandler} className="primary block" disable={cartItems?.length === 0}>
                           proceed to check checkOut
                         </button>
                       </li>
