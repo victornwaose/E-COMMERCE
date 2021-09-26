@@ -2,7 +2,7 @@
 export default {
   products: [
     {
-      _id: 1,
+     
       name: "suits",
       category: "suits",
       image: "/image/suits.jpeg",
@@ -13,7 +13,7 @@ export default {
       numReview: "10",
     },
     {
-      _id: 2,
+
       name: "corporate",
       category: "corporateWear",
       image: "/image/corporate.jpeg",
@@ -24,7 +24,7 @@ export default {
       numReview: "19",
     },
     {
-      _id: 3,
+    
       name: "native",
       category: "nativeWears",
       image: "/image/native.jpeg",
@@ -35,7 +35,7 @@ export default {
       numReview: "19",
     },
     {
-      _id: 4,
+  
       name: "native",
       category: "nativeWears",
       imageUrl: "/image/navtive1.jpeg",
@@ -46,7 +46,7 @@ export default {
       numReview: "10",
     },
     {
-      _id: 5,
+     
       name: "native",
       category: "nativeWears",
       imageUrl: "/image/native2.jpeg",
@@ -58,7 +58,7 @@ export default {
     },
 
     {
-      _id: "6",
+ 
       name: "shirt and jeans",
       category: "shirts",
       imageUrl: "/image/native3.jpeg",
@@ -70,7 +70,7 @@ export default {
       
     },
     {
-      _id: "7",
+     
       name: "native",
       category: "nativeWears",
       imageUrl: "/image/shirt_and_jeans.jpeg",

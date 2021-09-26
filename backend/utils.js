@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import config from "./config";
 
-const getToken = (user) => {
+ export  const generateToken = (user) => {
   return jwt.sign(
     {
       _id: user._id,
@@ -9,11 +9,11 @@ const getToken = (user) => {
       email: user.email,
       isAdmin: user.isAdmin,
     },
-    config.JWT_SECRET,
+    process.env.JWT_SECRET,
     {
       expiresIn: "48h",
     }
   );
 };
 
-export { getToken };
+

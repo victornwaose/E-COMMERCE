@@ -52,7 +52,7 @@ const CartScreen = (props) => {
                               <img src={item.image} alt={item.product} className="small"/>
                           </div>
                           <div className="min-30">
-                             <Link  className="link-item"to={`/product/${item.product}`}>{item.name}</Link> 
+                             <Link  to={`/product/${item.product}`}  className="link-item" >{item.name}</Link> 
                           </div>
                           <div>
                             <select value={item.qty} onChange={e => dispatch(addToCart(item.product , Number(e.target.value)))}>

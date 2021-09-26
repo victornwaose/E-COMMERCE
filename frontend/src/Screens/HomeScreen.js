@@ -33,7 +33,7 @@ const HomeScreen = () => {
                   <Link to={"/product/" + product._id}>
                     <img
                       className="product-image"
-                      src={product.Image}
+                      src={product.image}
                       alt=""
                     />
                   </Link>
