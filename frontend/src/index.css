@@ -95,7 +95,11 @@ margin-left: 4rem;
   color: #fff;
 }
 .link{
+  display: flex;
   margin-right: 4rem;
+  }
+  .link-cart {
+    margin-right: 2rem;
   }
   .link h1{
     margin: 0;
@@ -227,32 +231,34 @@ button .primary:hover {
 }
 
 
-/* forms  */
-
 .form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
 }
-.form-container {
+.form > div {
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  border: 0.1rem #f0f0f0f0 solid;
-  border-radius: 0.5rem;
-  list-style-type: none;
+  margin: 1rem;
 }
-.form-container li {
-  display: flex;
-  flex-direction: column;
-  margin-bottom:  1rem;
-  margin-top: 1rem;
-
+.form label {
+  margin: 1rem 0;
+  display: block;
 }
-input {
+.form input {
+  width: 60rem;
+  background-color: rgb(221, 221, 221);
   padding: 1rem;
-  border: .1rem #c0c0c0 solid;
-  border-radius: .5rem;
-     
 }
+.form button {
+  width: 62rem;
+  margin-top: 1rem;
+  margin-top: 2rem;;
+}
+.form-link{
+  display: flex;
+  margin-top: 2rem;
+}
+.form-link-reg{
+  color: #404040;
+}
+

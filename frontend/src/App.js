@@ -5,7 +5,7 @@ import ProductScreen from "./Screens/ProductScreen";
 import Footer from "./footer/Footer"
 import "./App.css";
 import{CartScreen} from "./Screens/CartScreen";
-import signinScreen from "./Screens/SigninScreen";
+import SigninScreen from "./Screens/SigninScreen";
 import { useSelector } from "react-redux";
 
 
@@ -22,8 +22,8 @@ function App() {
               </h1>
           </div>
           <div className="link">
-              <h1 >   
-              <Link to="/cart?">Cart
+              <h1  >   
+              <Link  className="link-cart" to="/cart?">Cart
               {
               cartItems?.length > 0 && (
                 <span className="badge">{cartItems?.length}</span>
@@ -32,12 +32,7 @@ function App() {
             </Link>
           </h1>
               <h1>
-                  {/* {userInfo ? (
-                    <Link to="/profile">{userInfo.name}</Link>
-                    
-                  ) : (
-                    <Link to="/signin">SignIn</Link>
-                  )} */}
+                  <Link to="/signin">login</Link>
               </h1>
           </div>
       </header>
@@ -46,7 +41,7 @@ function App() {
                 <Route path="/product/:id" component={ProductScreen} />
                 <Route path="/cart/:id?" component={CartScreen} />
                 <Route path="/" exact={true} component={HomeScreen} />
-                <Route path ="/signin" component={signinScreen} />
+                <Route path ="/signin" component={SigninScreen} />
             </div>
             </Switch>
             <Footer />
