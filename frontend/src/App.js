@@ -4,6 +4,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import ProductScreen from "./Screens/ProductScreen";
 import Footer from "./footer/Footer"
 import "./App.css";
+import RegisterScreen from "./Screens/RegisterScreen"
 import {signout} from "./actions/userAction";
 import{CartScreen} from "./Screens/CartScreen";
 import SigninScreen from "./Screens/SigninScreen";
@@ -62,6 +63,7 @@ const signoutHandler =() => {
                 <Route path="/cart/:id?" component={CartScreen} />
                 <Route path="/" exact={true} component={HomeScreen} />
                 <Route path ="/signin" component={SigninScreen} />
+                <Route path ="/register" component={RegisterScreen} />
             </div>
             </Switch>
             <Footer />

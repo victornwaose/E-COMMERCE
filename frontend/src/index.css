@@ -281,4 +281,8 @@ button .primary:hover {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+  position: fixed;
+}
+.loading {
+  display: block !important;
 }
