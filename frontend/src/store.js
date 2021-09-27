@@ -2,17 +2,17 @@ import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import { productDetailsReducer, productListReducer } from "./reducer/productListReducer";
 import thunk  from "redux-thunk"
 import { cartReducer } from "./reducer/cartReducer";
-import Cookie from "js-cookie";
 import { userSigninReducer } from "./reducer/userReducer";
 
  
-const userInfo = Cookie.getJSON("userInfo") || null;
 
 const initialState = {
+  userSignin :{
+      userInfo: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')): null
+  },
   cart : {
     cartItems : localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem("cartItem")) :[]
   },  
-  userSignin: { userInfo }
 };
 const reducer = combineReducers({
   productList: productListReducer,
