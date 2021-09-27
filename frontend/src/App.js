@@ -10,6 +10,7 @@ import{CartScreen} from "./Screens/CartScreen";
 import SigninScreen from "./Screens/SigninScreen";
 import { useSelector, useDispatch } from "react-redux";
 import ShippingAddressScreen from "./Screens/ShippingAddressScreen";
+import PaymentMethodScreen from "./Screens/PaymentMethodScreen";
 
 
 function App() {
@@ -61,10 +62,11 @@ const signoutHandler =() => {
             <Switch>
             <div className="main">
                 <Route path="/product/:id" component={ProductScreen} />
-                <Route path="/cart/:id?" component={CartScreen} />
+                <Route path="/cart/:_id?" component={CartScreen} />
                 <Route path="/" exact={true} component={HomeScreen} />
                 <Route path ="/signin" component={SigninScreen} />
                 <Route path ="/shipping" component={ShippingAddressScreen}/>
+                <Route path ="/payment" component={PaymentMethodScreen}/>
                 <Route path ="/register" component={RegisterScreen} />
             </div>
             </Switch>

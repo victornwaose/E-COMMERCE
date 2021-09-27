@@ -242,7 +242,6 @@ button .primary:hover {
 }
 .form label {
   margin: 1rem 0;
-  display: block;
 }
 .form input {
   width: 60rem;

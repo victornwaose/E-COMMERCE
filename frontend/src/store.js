@@ -12,7 +12,8 @@ const initialState = {
   },
   cart : {
     cartItems : localStorage.getItem("cartItem") ? JSON.parse(localStorage.getItem("cartItem")) :[],
-    shippingAddress :localStorage.getItem("shippingAddress") ? JSON.parse(localStorage.getItem("shippingAddress")) :{}
+    shippingAddress :localStorage.getItem("shippingAddress") ? JSON.parse(localStorage.getItem("shippingAddress")) :{},
+    paymentMethod: "PayPal",
   },  
 };
 const reducer = combineReducers({

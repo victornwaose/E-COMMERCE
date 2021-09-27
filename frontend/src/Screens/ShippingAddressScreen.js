@@ -14,11 +14,11 @@ const ShippingAddressScreen = (props) => {
     const cart =useSelector((state)=> state.cart);
    const {shippingAddress} = cart;
 
-    const [fullName, setFullName]= useState(shippingAddress.fullName);
-    const [address, setAddress]= useState(shippingAddress.address);
-    const [postalCode, setPostalCode]= useState(shippingAddress.postalCode);
-    const [country, setCountry]= useState(shippingAddress.country);
-    const[city, setCity] = useState(shippingAddress.city);
+    const [fullName, setFullName]= useState(shippingAddress?.fullName);
+    const [address, setAddress]= useState(shippingAddress?.address);
+    const [postalCode, setPostalCode]= useState(shippingAddress?.postalCode);
+    const [country, setCountry]= useState(shippingAddress?.country);
+    const[city, setCity] = useState(shippingAddress?.city);
 
 
     const sumbitHandler = (e)=> {
