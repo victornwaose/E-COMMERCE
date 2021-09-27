@@ -9,6 +9,7 @@ import {signout} from "./actions/userAction";
 import{CartScreen} from "./Screens/CartScreen";
 import SigninScreen from "./Screens/SigninScreen";
 import { useSelector, useDispatch } from "react-redux";
+import ShippingAddressScreen from "./Screens/ShippingAddressScreen";
 
 
 function App() {
@@ -63,6 +64,7 @@ const signoutHandler =() => {
                 <Route path="/cart/:id?" component={CartScreen} />
                 <Route path="/" exact={true} component={HomeScreen} />
                 <Route path ="/signin" component={SigninScreen} />
+                <Route path ="/shipping" component={ShippingAddressScreen}/>
                 <Route path ="/register" component={RegisterScreen} />
             </div>
             </Switch>
