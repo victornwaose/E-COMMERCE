@@ -19,11 +19,11 @@ function ProductScreen(props) {
 
 
     useEffect(() => {
-        dispatch(detailsProduct(productId));
+    dispatch(detailsProduct(productId));
       }, [dispatch, productId]);
 
       const addToCartHandler = ( ) => {
-        props.history.push(`/cart/${productId}?qty={qty} `);
+        props.history.push(`/cart/${productId}?qty=${qty} `);
       }
   return (
     <div>
@@ -74,7 +74,7 @@ function ProductScreen(props) {
                                             </div>
                                         </div>
                                     </li>
-                                        {product.countInStock >0 && (
+                                        {product.countInStock > 0 && (
                                                 <>
                                                     <li> 
                                                         <div className="row">

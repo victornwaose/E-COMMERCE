@@ -37,7 +37,7 @@ const redirect = props.location.search
           <div className="form-container">
                 <h1>Sign In</h1>
                 {loading && <LoadingBox></LoadingBox>}
-                {error && <MessageBox></MessageBox>}
+                {error && <MessageBox>{error}</MessageBox>}
                 <div>
                       <label htmlFor="email">Email</label>
                       <input
