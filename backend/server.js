@@ -4,9 +4,11 @@ import path from "path";
 import fileUpload from "express-fileUpload";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+
 import userRouter from "./routers/useRouter";
 import bodyParser from "body-parser"
 import productRouter from "./routers/productRouter";
+import orderRouter from "./routers/orderRouter";
 
 dotenv.config();
 const mongodbUrl = Config.MONGODB_URL;
@@ -24,6 +26,7 @@ app.use(bodyParser.json());
 app.use("/api/users", userRouter);
  
 app.use("/api/products", productRouter);
+app.use("/api/orders", orderRouter);
 
 app.use((err, req, res, next ) => {
   res.status(500).send({message: err.message});
